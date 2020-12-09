@@ -11,15 +11,15 @@ Parameters:
   ProjectName:
     Type: String
     Description: Project Name
-    Default: appdynamics
+    Default: appd-serverless
   WebsiteBucket:
     Type: String
     Description: Website S3 bucket name
-    Default: appdynamics.awsworkshop.io 
+    Default: appd-serverless.awsworkshop.io 
   CloudFrontDistroId:
     Type: String
     Description: CloudFront distribution ID 
-    Default: E1NM5YXEVAUN7D
+    Default: E2Q0QKUZ6FQI62
   GitHubRepo:
     Type: String
     Description: repo name
