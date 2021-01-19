@@ -39,6 +39,10 @@ enableEmoji = true
   ordersectionsby = "weight"
   # Change default color scheme with a variant one. Can be "red", "blue", "green".
   themeVariant = "mine"
+  # AppDynamics EUM application key
+  eumAppKey = "AD-AAB-ABB-FZP"
+  # AppDynamics EUM version
+  eumVersion = "20.9.0.3268"
 
 
 [outputs]
