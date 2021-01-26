@@ -1,8 +1,10 @@
 ---
-title: "AWS Serverless Monitoring with AppDyanmics"
+title: "AWS Serverless Monitoring with AppDynamics"
 chapter: false
 weight: 1
 ---
+
+# AWS Serverless Monitoring with AppDynamics
 
 ![image](/images/appd_logo.png)
 
