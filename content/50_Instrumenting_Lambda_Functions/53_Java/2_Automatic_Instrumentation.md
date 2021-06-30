@@ -85,7 +85,7 @@ Next, expand the *src* folder, then expand the following folders: *main*, *java*
 AWS Lambda functions in Java require code changes to handle instrumentation. When writing Lambda functions in Java, they will inherit from one of two interfaces -- *RequestHandler* or *RequestStreamHandler*. If the function class inherits from *RequestStreamHandler*, then we can take advantage of more automated instrumentation provided by the tracer SDK.
 
 {{% notice note %}}
-Automatic tracer instrumentation only works with functions that inherit from *RequestStreamHandler*. It uses default configurations to manage the transaction, handle correlation, and report errors. See [the documentation](https://docs.appdynamics.com/display/PRO45/Java+Serverless+Tracer) for more information on when automatic instrumentation can be leveraged.
+Automatic tracer instrumentation only works with functions that inherit from *RequestStreamHandler*. It uses default configurations to manage the transaction, handle correlation, and report errors. See [the documentation](https://docs.appdynamics.com/4.5.x/en/application-monitoring/install-app-server-agents/serverless-apm-for-aws-lambda/java-serverless-tracer) for more information on when automatic instrumentation can be leveraged.
 {{% /notice %}}
 
 The first thing we need to do is to import the appropriate tracer resources into the class. Locate the comment labeled `//TODO: import AppDynamics tracer classes` and add the following import statements:

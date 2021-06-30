@@ -6,7 +6,7 @@ weight = 10
 
 ![image](/images/ad_financial_logo_lrg.png)
 
-AD Financial is a financial products and services company. They provide digital retail banking capabilities across the globe. 
+AD Financial is a financial products and services company. They provide digital retail banking capabilities across the globe.
 
 They currently have a home-grown legacy application that handles internal job postings and candidate selection. Due to explosive growth in hiring, some components of this application were recently refactored into a serverless architecture to use Amazon Lambda, Amazon API Gateway, Amazon S3, and Amazon DynamoDB. [Amazon Lambda](https://aws.amazon.com/lambda/) allows execution of code without needing to provision or manage server infrastructure. This provides flexibility in being able to rapidly deploy and update services while keeping costs down by paying only for the compute time used.
 
