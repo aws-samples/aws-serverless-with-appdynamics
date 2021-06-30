@@ -85,7 +85,7 @@ Next, expand the *src* folder, then expand the following folders: *main*, *java*
 AWS Lambda functions in Java require code changes to handle instrumentation. When writing Lambda functions in Java, they will inherit from one of two interfaces -- *RequestHandler* or *RequestStreamHandler*. If the function class inherits from *RequestStreamHandler*, then we can take advantage of more automated instrumentation provided by the tracer SDK. In this case, this Lambda function inherits from *RequestHandler*, so we will have to use manual instrumentation.
 
 {{% notice note %}}
-Automatic tracer instrumentation only works with functions that inherit from *RequestStreamHandler*. It uses default configurations to manage the transaction, handle correlation, and report errors. See [the documentation](https://docs.appdynamics.com/display/PRO45/Java+Serverless+Tracer) for more information on when automatic instrumentation can be leveraged.
+Automatic tracer instrumentation only works with functions that inherit from *RequestStreamHandler*. It uses default configurations to manage the transaction, handle correlation, and report errors. See [the documentation](https://docs.appdynamics.com/4.5.x/en/application-monitoring/install-app-server-agents/serverless-apm-for-aws-lambda/java-serverless-tracer) for more information on when automatic instrumentation can be leveraged.
 {{% /notice %}}
 
 Throughout this section, it is recommended to save **FrontEndHandler.java** periodically. When we make changes, we are going to approach changes in an atomic manner -- any resources that we open or begin (such as exit calls and transactions) will then be immediately closed or completed in the next step. The first thing we need to do is to import the appropriate tracer resources into the class. Locate the comment labeled `//TODO: import AppDynamics tracer classes` and add the following import statements:
@@ -168,7 +168,7 @@ The above block of code accomplishes the following:
 - Creates and starts the transaction using the located correlation header
 
 {{% notice note %}}
-With the above approach, this assume that we are using the default environment variables as specified in the documentation. If you are using different environment variables or storing the AppDynamics information in a vault, you will need to use a config builder to instantiate the tracer. See [the documentation](https://docs.appdynamics.com/display/PRO45/Java+Serverless+Tracer+API) under *Override the Tracer's Defauult Behavior* for how to do this.
+With the above approach, this assume that we are using the default environment variables as specified in the documentation. If you are using different environment variables or storing the AppDynamics information in a vault, you will need to use a config builder to instantiate the tracer. See [the documentation](https://docs.appdynamics.com/4.5.x/en/application-monitoring/install-app-server-agents/serverless-apm-for-aws-lambda/java-serverless-tracer/java-serverless-tracer-api) under *Override the Tracer's Defauult Behavior* for how to do this.
 {{% /notice %}}
 
 Next, we're going to locate the comment labeled `TODO: Add code to end transaction` and add the following code block beneath that comment to end the transaction prior to returning our response from the Lambda function:

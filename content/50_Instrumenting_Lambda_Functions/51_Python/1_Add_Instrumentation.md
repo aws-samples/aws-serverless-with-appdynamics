@@ -45,14 +45,14 @@ Finally, create a new variable called **AWS_LAMBDA_EXEC_WRAPPER** and set its va
 ![image](/images/instrumenting_lambda_functions/python/Python_Serverless_with_Vars.png)
 
 {{% notice note %}}
-The **AWS_LAMBDA_EXEC_WRAPPER** environment variable is only used for Python functions if the version of Python is 3.8. Versions 3.6 and 3.7 will use a different environment variable which is outlined in the [product documentation](https://docs.appdynamics.com/display/PRO45/Use+the+AppDynamics+AWS+Lambda+Extension+to+Instrument+Serverless+APM+at+Runtime).
+The **AWS_LAMBDA_EXEC_WRAPPER** environment variable is only used for Python functions if the version of Python is 3.8. Versions 3.6 and 3.7 will use a different environment variable which is outlined in the [product documentation](https://docs.appdynamics.com/21.6/en/application-monitoring/install-app-server-agents/serverless-apm-for-aws-lambda/use-the-appdynamics-aws-lambda-extension-to-instrument-serverless-apm-at-runtime).
 {{% /notice %}}
 
 Save your changes, and now we will add the AppDynamics AWS Lambda Extension to each of the Lambda functions. Locate the **functions** section within **serverless.yml**. Within that section will be 2 functions: *lambda-1* and *lambda-2*. To each of these functions, add the following:
 
 ``` yaml
     layers:
-      - arn:aws:lambda:${opt:region, self:provider.region}:716333212585:layer:appdynamics-lambda-extension:9
+      - arn:aws:lambda:${opt:region, self:provider.region}:716333212585:layer:appdynamics-lambda-extension:10
 ```
 
 The AppDynamics AWS Lambda Extension is published as a Lambda layer, and it takes advantage of the AWS Lambda Extensions API (currently under public preview). In this snippet, we're telling our deployment to base the region of our Lambda layer on the region where our Lambdas are deployed. The resulting change should look like the screenshot below.
@@ -60,7 +60,7 @@ The AppDynamics AWS Lambda Extension is published as a Lambda layer, and it take
 ![image](/images/instrumenting_lambda_functions/python/Serverless_Lambda_Layers.png)
 
 {{% notice note %}}
-The AppDynamics AWS Lambda Extension is only available in certain AWS regions. For the latest set of regions where it is available, please see the [AppDynamics documentation](https://docs.appdynamics.com/display/PRO45/Use+the+AppDynamics+AWS+Lambda+Extension+to+Instrument+Serverless+APM+at+Runtime). Also, the region from where you use the AppDynamics AWS Lambda Extension must match the region where your Lambda functions are running.
+The AppDynamics AWS Lambda Extension is only available in certain AWS regions. For the latest set of regions where it is available, please see the [AppDynamics documentation](https://docs.appdynamics.com/21.6/en/application-monitoring/install-app-server-agents/serverless-apm-for-aws-lambda/use-the-appdynamics-aws-lambda-extension-to-instrument-serverless-apm-at-runtime). Also, the region from where you use the AppDynamics AWS Lambda Extension must match the region where your Lambda functions are running.
 {{% /notice %}}
 
 Save your changes. Switch back to the terminal window in the Cloud9 workspace. Change to the *python* directory under the repository, then execute a deploy of the Python Lambda function as shown in the snippet below.

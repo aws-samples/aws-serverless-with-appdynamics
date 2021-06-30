@@ -276,7 +276,7 @@ module.exports.doFunctionAsync2 = async (event, context) => {
 ```
 
 {{% notice note %}}
-The tracer automatically reports errors that occur within an exit call. If you have a scenario where a resulting execution is considered an error, you can manually report custom exit calls. See [the documentation](https://docs.appdynamics.com/display/PRO45/Python+Serverless+Tracer+API) for more information.
+The tracer automatically reports errors that occur within an exit call. If you have a scenario where a resulting execution is considered an error, you can manually report custom exit calls. See [the documentation](https://docs.appdynamics.com/21.6/en/application-monitoring/install-app-server-agents/serverless-apm-for-aws-lambda/node-js-serverless-tracer/node-js-serverless-tracer-api) for more information.
 {{% /notice %}}
 
 Since we have already imported the tracer at the top of the file, we do not need to do so again. There are 6 commented sections within this file where we will be adding custom code -- 2 places for starting the exit call and 4 for ending the exit call (2 in a success scenario, 2 in a failure scenario). Locate the to-do comment for adding the second exit call to DynamoDB and add the following code below the comment:
@@ -326,7 +326,7 @@ Finally, locate the to-do comments for ending the third exit call to DynamoDB (t
 ```
 
 {{% notice note %}}
-Information on the variables to pass when starting the exit call can be fouond in the [product documentation for the NodeJS tracer](https://docs.appdynamics.com/display/PRO45/Customize+the+Node.js+Serverless+Tracer).
+Information on the variables to pass when starting the exit call can be fouond in the [product documentation for the NodeJS tracer](https://docs.appdynamics.com/4.5.x/en/application-monitoring/install-app-server-agents/serverless-apm-for-aws-lambda/node-js-serverless-tracer/node-js-serverless-tracer-api).
 {{% /notice %}}
 
 The code for the **module.exports.doFunctionAsync2** function should look like the following:
