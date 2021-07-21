@@ -10,7 +10,7 @@ In our sandbox environment, the Lambda functions being utilized were written by 
 
 AppDynamics supports monitoring AWS Lambda functions written in Python (version 3.6 and greater), NodeJS (version 10.x and greater), and Java (version 1.8 and greater). Instrumentation is accomplished through using a tracer module that captures relevant data. The tracer module does not depend on any other AWS services. The tracer captures performance information for each invocation of the Lambda function and transmits it asynchronously to AppDynamics.
 
-For functions written in Python and NodeJS, AppDynamics has integrated with [AWS Lambda Extensions](https://aws.amazon.com/blogs/compute/introducing-aws-lambda-extensions-in-preview/) feature to create a Lambda Layer to automatically handle instrumentation.
+For functions written in Python and NodeJS, AppDynamics has integrated with [AWS Lambda Extensions](https://aws.amazon.com/blogs/aws/getting-started-with-using-your-favorite-operational-tools-on-aws-lambda-extensions-are-now-generally-available/) feature to create a Lambda Layer to automatically handle instrumentation.
 ![image](/images/instrumenting_lambda_functions/Node_Python_Lambda_Layer.png)
 
 For Java-based Lambda functions, the tracer is embedded as an SDK directly within the function.

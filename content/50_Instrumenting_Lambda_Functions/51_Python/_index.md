@@ -6,7 +6,7 @@ weight = 51
 
 ## Objective
 
-In this section of the workshop, we are going to add AppDynamics instrumentation to a set of AWS Lambda functions written in Python. We will walk through the steps of configuring the Lambda functions to use the AppDynamics [AWS Lambda Extension](https://aws.amazon.com/blogs/compute/introducing-aws-lambda-extensions-in-preview/). Finally, we will add in custom code to show exit calls to AWS resources that are not automatically detected.
+In this section of the workshop, we are going to add AppDynamics instrumentation to a set of AWS Lambda functions written in Python. We will walk through the steps of configuring the Lambda functions to use the AppDynamics [AWS Lambda Extension](https://aws.amazon.com/blogs/aws/getting-started-with-using-your-favorite-operational-tools-on-aws-lambda-extensions-are-now-generally-available/). Finally, we will add in custom code to show exit calls to AWS resources that are not automatically detected.
 
 ## Introduction to AppDynamics Serverless APM for AWS Lambda -- Python
 

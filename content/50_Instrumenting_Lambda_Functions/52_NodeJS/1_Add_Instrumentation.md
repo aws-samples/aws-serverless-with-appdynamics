@@ -49,7 +49,7 @@ Save your changes, and now we will add the AppDynamics AWS Lambda Extension to e
       - arn:aws:lambda:${opt:region, self:provider.region}:716333212585:layer:appdynamics-lambda-extension:10
 ```
 
-The AppDynamics AWS Lambda Extension is published as a Lambda layer, and it takes advantage of the AWS Lambda Extensions API (currently under public preview). In this snippet, we're telling our deployment to base the region of our Lambda layer on the region where our Lambdas are deployed. The resulting change should look like the screenshot below.
+The AppDynamics AWS Lambda Extension is published as a Lambda layer, and it takes advantage of the AWS Lambda Extensions API. In this snippet, we're telling our deployment to base the region of our Lambda layer on the region where our Lambdas are deployed. The resulting change should look like the screenshot below.
 
 ![image](/images/instrumenting_lambda_functions/node/Serverless_Lambda_Layers.png)
 
