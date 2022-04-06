@@ -46,7 +46,7 @@ Save your changes, and now we will add the AppDynamics AWS Lambda Extension to e
 
 ``` yaml
     layers:
-      - arn:aws:lambda:${opt:region, self:provider.region}:716333212585:layer:appdynamics-lambda-extension:10
+      - arn:aws:lambda:${opt:region, self:provider.region}:338050622354:layer:appdynamics-lambda-extension:15
 ```
 
 The AppDynamics AWS Lambda Extension is published as a Lambda layer, and it takes advantage of the AWS Lambda Extensions API. In this snippet, we're telling our deployment to base the region of our Lambda layer on the region where our Lambdas are deployed. The resulting change should look like the screenshot below.
@@ -58,7 +58,7 @@ If you have already instrumented the Python Lambda function, you'll notice that 
 {{% /notice %}}
 
 {{% notice note %}}
-The AppDynamics AWS Lambda Extension is only available in certain AWS regions. For the latest set of regions where it is available, please see the [AppDynamics documentation](https://docs.appdynamics.com/21.6/en/application-monitoring/install-app-server-agents/serverless-apm-for-aws-lambda/use-the-appdynamics-aws-lambda-extension-to-instrument-serverless-apm-at-runtime). Also, the region from where you use the AppDynamics AWS Lambda Extension must match the region where your Lambda functions are running.
+The AppDynamics AWS Lambda Extension is only available in certain AWS regions. For the latest set of regions where it is available, please see the [AppDynamics documentation](https://docs.appdynamics.com/latest/en/application-monitoring/install-app-server-agents/serverless-apm-for-aws-lambda/use-the-appdynamics-aws-lambda-extension-to-instrument-serverless-apm-at-runtime). Also, the region from where you use the AppDynamics AWS Lambda Extension must match the region where your Lambda functions are running.
 {{% /notice %}}
 
 Save your changes. Switch back to the terminal window in the Cloud9 workspace. Change to the *node* directory under the repository, then execute a deploy of the NodeJS Lambda function by executing the commands in the snippet below.
