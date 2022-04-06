@@ -147,7 +147,7 @@ The instrumented **handler.py** can be found [here](https://github.com/Appdynami
 Save **handler.py**. We will now make similar changes to **handler2.py**, so go ahead and open that file in your Cloud9 workspace.
 
 {{% notice note %}}
-The tracer automatically reports errors that occur within an exit call. If you have a scenario where a resulting execution is considered an error, you can manually report custom exit calls. See [the documentation](https://docs.appdynamics.com/21.6/en/application-monitoring/install-app-server-agents/serverless-apm-for-aws-lambda/python-serverless-tracer/python-serverless-tracer-api) for more information.
+The tracer automatically reports errors that occur within an exit call. If you have a scenario where a resulting execution is considered an error, you can manually report custom exit calls. See [the documentation](https://docs.appdynamics.com/latest/en/application-monitoring/install-app-server-agents/serverless-apm-for-aws-lambda/python-serverless-tracer/python-serverless-tracer-api) for more information.
 {{% /notice %}}
 
 On line 1 in **handler2.py**, you will see a to-do comment to import the tracer. Add the following code on the following line:
@@ -171,7 +171,7 @@ There are 2 commented sections within this file where we will be adding custom e
 ```
 
 {{% notice note %}}
-Information on the variables to pass when starting the exit call can be fouond in the [product documentation for the Python tracer](https://docs.appdynamics.com/21.6/en/application-monitoring/install-app-server-agents/serverless-apm-for-aws-lambda/python-serverless-tracer/python-serverless-tracer-api).
+Information on the variables to pass when starting the exit call can be fouond in the [product documentation for the Python tracer](https://docs.appdynamics.com/latest/en/application-monitoring/install-app-server-agents/serverless-apm-for-aws-lambda/python-serverless-tracer/python-serverless-tracer-api).
 {{% /notice %}}
 
 An example of the instrumented **handler2.py** can be found [here](https://github.com/Appdynamics/appd_aws_lambda_lab/blob/instrumented/python/handler2.py).
